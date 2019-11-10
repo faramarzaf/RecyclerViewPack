@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.faramarz.tictacdev.recyclerview">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,13 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-
-
-
-
-
-        <activity android:name=".image_recycler.ImageRecycler"></activity>
+        <activity android:name=".horizontal_recycler.HorizontalActivity"></activity>
+        <activity android:name=".image_recycler.ImageRecycler" />
         <activity android:name=".simple_recycler.SimpleRecycler" />
         <activity android:name=".MainActivity">
             <intent-filter>
