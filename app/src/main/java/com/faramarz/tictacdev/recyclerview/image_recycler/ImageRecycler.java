@@ -33,15 +33,15 @@ public class ImageRecycler extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_recycler);
+        recyclerView = findViewById(R.id.my_recycler_view);
 
         myOnClickListener = new MyOnClickListener(this);
-        recyclerView = findViewById(R.id.my_recycler_view);
-        recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
         data = new ArrayList<>();
 
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         for (int i = 0; i < MyData.nameArray.length; i++) {
             data.add(new CustomerModel(
@@ -54,12 +54,9 @@ public class ImageRecycler extends AppCompatActivity {
         removedItems = new ArrayList<>();
         adapter = new CustomerAdapter(data);
         recyclerView.setAdapter(adapter);
-
     }
 
-
     public static class MyOnClickListener implements View.OnClickListener {
-
         private final Context context;
 
         private MyOnClickListener(Context context) {
@@ -70,7 +67,6 @@ public class ImageRecycler extends AppCompatActivity {
         public void onClick(View v) {
             removeItem(v);
         }
-
 
         private void removeItem(View v) {
             int selectedItemPosition = recyclerView.getChildPosition(v);
@@ -87,9 +83,7 @@ public class ImageRecycler extends AppCompatActivity {
                 removedItems.add(selectedItemId);
                 data.remove(selectedItemPosition);
                 adapter.notifyItemRemoved(selectedItemPosition);
-
             }
-
         }
     }
 
@@ -99,7 +93,6 @@ public class ImageRecycler extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

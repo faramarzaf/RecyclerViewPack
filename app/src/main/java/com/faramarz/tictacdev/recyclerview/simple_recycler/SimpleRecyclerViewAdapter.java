@@ -15,13 +15,12 @@ import java.util.List;
 
 public class SimpleRecyclerViewAdapter extends RecyclerView.Adapter<SimpleRecyclerViewAdapter.ViewHolder> {
 
-
     private List<String> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
-   public SimpleRecyclerViewAdapter(Context context, List<String> data) {
+    public SimpleRecyclerViewAdapter(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -65,7 +64,7 @@ public class SimpleRecyclerViewAdapter extends RecyclerView.Adapter<SimpleRecycl
     }
 
     // convenience method for getting data at click position
-   public String getItem(int id) {
+    public String getItem(int id) {
         return mData.get(id);
     }
 

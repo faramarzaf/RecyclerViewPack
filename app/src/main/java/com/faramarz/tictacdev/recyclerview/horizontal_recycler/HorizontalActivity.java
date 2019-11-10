@@ -55,7 +55,6 @@ public class HorizontalActivity extends AppCompatActivity {
                 if (ChildView != null && gestureDetector.onTouchEvent(motionEvent)) {
                     //Getting clicked value.
                     RecyclerViewItemPosition = Recyclerview.getChildAdapterPosition(ChildView);
-                    // Showing clicked item value on screen using toast message.
                     Toast.makeText(HorizontalActivity.this, Number.get(RecyclerViewItemPosition), Toast.LENGTH_SHORT).show();
                 }
                 return false;
@@ -63,18 +62,15 @@ public class HorizontalActivity extends AppCompatActivity {
 
             @Override
             public void onTouchEvent(RecyclerView Recyclerview, MotionEvent motionEvent) {
-
             }
 
             @Override
             public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-
             }
         });
 
     }
 
-    // function to add items in RecyclerView.
     public void AddItemsToRecyclerViewArrayList() {
 
         Number = new ArrayList<>();

@@ -19,14 +19,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bind();
+        clickEvents();
+    }
+
+
+    private void bind() {
         btnSimple = findViewById(R.id.btnSimple);
         btnWithImage = findViewById(R.id.btnWithImage);
         btnHorizontal = findViewById(R.id.btnHorizontal);
+
+    }
+
+    private void clickEvents() {
         btnSimple.setOnClickListener(this);
         btnWithImage.setOnClickListener(this);
         btnHorizontal.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View v) {

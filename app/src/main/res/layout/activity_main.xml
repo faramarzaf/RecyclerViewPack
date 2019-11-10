@@ -9,7 +9,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <Button
         android:id="@+id/btnSimple"
         android:layout_width="match_parent"
@@ -21,7 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Image RecyclerView" />
-
 
     <Button
         android:id="@+id/btnHorizontal"
