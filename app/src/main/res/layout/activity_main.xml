@@ -27,5 +27,11 @@
         android:layout_height="wrap_content"
         android:text="Horizontal RecyclerView" />
 
+    <Button
+        android:id="@+id/btnMultiView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multi view RecyclerView" />
+
 
 </LinearLayout>

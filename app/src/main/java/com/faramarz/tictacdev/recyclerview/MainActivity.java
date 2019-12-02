@@ -9,11 +9,12 @@ import android.widget.Button;
 
 import com.faramarz.tictacdev.recyclerview.horizontal_recycler.HorizontalActivity;
 import com.faramarz.tictacdev.recyclerview.image_recycler.ImageRecycler;
+import com.faramarz.tictacdev.recyclerview.multi_view.MultiViewActivity;
 import com.faramarz.tictacdev.recyclerview.simple_recycler.SimpleRecycler;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnSimple, btnWithImage, btnHorizontal;
+    Button btnSimple, btnWithImage, btnHorizontal,btnMultiView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSimple = findViewById(R.id.btnSimple);
         btnWithImage = findViewById(R.id.btnWithImage);
         btnHorizontal = findViewById(R.id.btnHorizontal);
-
+        btnMultiView  = findViewById(R.id.btnMultiView);
     }
 
     private void clickEvents() {
         btnSimple.setOnClickListener(this);
         btnWithImage.setOnClickListener(this);
         btnHorizontal.setOnClickListener(this);
+        btnMultiView.setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnHorizontal:
                 startActivity(new Intent(MainActivity.this, HorizontalActivity.class));
+                break;
+            case R.id.btnMultiView:
+                startActivity(new Intent(MainActivity.this, MultiViewActivity.class));
                 break;
         }
     }

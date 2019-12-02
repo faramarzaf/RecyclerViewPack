@@ -34,7 +34,6 @@ public class ImageRecycler extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_recycler);
         recyclerView = findViewById(R.id.my_recycler_view);
-
         myOnClickListener = new MyOnClickListener(this);
         layoutManager = new LinearLayoutManager(this);
         data = new ArrayList<>();
@@ -44,12 +43,7 @@ public class ImageRecycler extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         for (int i = 0; i < MyData.nameArray.length; i++) {
-            data.add(new CustomerModel(
-                    MyData.nameArray[i],
-                    MyData.versionArray[i],
-                    MyData.id_[i],
-                    MyData.drawableArray[i]
-            ));
+            data.add(new CustomerModel(MyData.nameArray[i], MyData.versionArray[i], MyData.id_[i], MyData.drawableArray[i]));
         }
         removedItems = new ArrayList<>();
         adapter = new CustomerAdapter(data);
