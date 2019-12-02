@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.faramarz.tictacdev.recyclerview.advance_recyclerview.AdvanceRecyclerViewActivity;
 import com.faramarz.tictacdev.recyclerview.horizontal_recycler.HorizontalActivity;
 import com.faramarz.tictacdev.recyclerview.image_recycler.ImageRecycler;
 import com.faramarz.tictacdev.recyclerview.multi_view.MultiViewActivity;
@@ -14,7 +15,7 @@ import com.faramarz.tictacdev.recyclerview.simple_recycler.SimpleRecycler;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnSimple, btnWithImage, btnHorizontal,btnMultiView;
+    Button btnSimple, btnWithImage, btnHorizontal,btnMultiView,btnAdvance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnWithImage = findViewById(R.id.btnWithImage);
         btnHorizontal = findViewById(R.id.btnHorizontal);
         btnMultiView  = findViewById(R.id.btnMultiView);
+        btnAdvance  = findViewById(R.id.btnAdvance);
+
     }
 
     private void clickEvents() {
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnWithImage.setOnClickListener(this);
         btnHorizontal.setOnClickListener(this);
         btnMultiView.setOnClickListener(this);
+        btnAdvance.setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnMultiView:
                 startActivity(new Intent(MainActivity.this, MultiViewActivity.class));
+                break;
+            case R.id.btnAdvance:
+                startActivity(new Intent(MainActivity.this, AdvanceRecyclerViewActivity.class));
                 break;
         }
     }
