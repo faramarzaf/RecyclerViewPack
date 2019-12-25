@@ -11,7 +11,7 @@ import com.faramarz.tictacdev.recyclerview.R;
 import java.util.ArrayList;
 
 public class AdvanceRecyclerViewActivity extends AppCompatActivity {
-
+    // https://android-pratap.blogspot.com/2015/12/horizontal-recyclerview-in-vertical.html
     ArrayList<SectionDataModel> allSampleData;
     RecyclerView my_recycler_view;
     RecyclerViewDataAdapter adapter;
