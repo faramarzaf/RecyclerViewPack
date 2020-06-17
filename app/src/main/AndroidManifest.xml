@@ -13,11 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".advance_recyclerview.AdvanceRecyclerViewActivity"></activity>
+        <activity android:name=".simple_recycler.AnimalActivity"></activity>
+        <activity android:name=".advance_recyclerview.AdvanceRecyclerViewActivity" />
         <activity android:name=".multi_view.MultiViewActivity" />
         <activity android:name=".horizontal_recycler.HorizontalActivity" />
         <activity android:name=".image_recycler.ImageRecycler" />
-        <activity android:name=".simple_recycler.SimpleRecycler" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
